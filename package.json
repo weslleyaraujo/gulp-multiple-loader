@@ -1,13 +1,13 @@
 {
   "name": "gulp-multiple-loader",
   "version": "1.0.0",
-  "description": "",
+  "description": "Load single files for each gulp task with shared parameters.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
     "lodash": "^3.10.1"

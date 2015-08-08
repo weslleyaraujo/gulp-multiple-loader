@@ -1,11 +1,13 @@
+/*
+ * NOTE: Created just as an example
+ */
 'use strict';
 
 var gulp = require('gulp');
-var loader = require('./index.js');
-var src = '/lol/';
+var example = 'example value';
 
-loader(gulp, {
+require('./index.js')(gulp, {
   params: {
-    src: src
+    example: example
   }
 });
