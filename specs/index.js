@@ -5,7 +5,6 @@ var assert = require('assert');
 var loader = require('../index.js');
 var instance = null;
 
-console.log(before);
 describe('#gulp-multiple-loader', function () {
   before(function () {
     instance = loader.initialize(gulp);
