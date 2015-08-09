@@ -4,12 +4,14 @@
   "description": "Load single files for each gulp task with shared parameters.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha test"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^1.1.0",
     "gulp": "^3.9.0",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "mocha": "^2.2.5"
   }
 }
