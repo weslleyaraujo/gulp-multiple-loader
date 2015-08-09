@@ -22,6 +22,7 @@ module.exports = {
     this.options = _.extend(this.defaults, options || {})
     this.prepare();
     this.start();
+    return this;
   },
 
   prepare: function() {
