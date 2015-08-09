@@ -1,3 +1,4 @@
+/* global describe it before:true */
 'use strict';
 
 var gulp = require('gulp');
@@ -5,8 +6,8 @@ var assert = require('assert');
 var loader = require('../index.js');
 var instance = null;
 
-describe('#gulp-multiple-loader', function () {
-  before(function () {
+describe('#gulp-multiple-loader', function() {
+  before(function() {
     instance = loader.initialize(gulp);
   });
 

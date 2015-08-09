@@ -1,3 +1,4 @@
+/* global module __filename:true */
 'use strict';
 
 var _ = require('lodash');
@@ -19,7 +20,7 @@ module.exports = {
 
   initialize: function(gulp, options) {
     this.gulp = gulp;
-    this.options = _.extend(this.defaults, options || {})
+    this.options = _.extend(this.defaults, options || {});
     this.prepare();
     this.start();
     return this;
@@ -42,7 +43,7 @@ module.exports = {
   },
 
   filterFile: function(file) {
-    if(this.isFile(file)) {
+    if (this.isFile(file)) {
       this.load(file);
     }
   },
@@ -51,7 +52,8 @@ module.exports = {
     var fn = require(this.config.ABS_PATH + file);
     try {
       fn.call(null, this.gulp, this.options.params);
-    } catch(e) {
+    }
+    catch(e) {
       throw new Error(this.config.loadError.replace(/#\{file\}/g, file));
     }
   },
