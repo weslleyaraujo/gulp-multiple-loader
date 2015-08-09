@@ -5,8 +5,10 @@
 
 var gulp = require('gulp');
 var example = 'example value';
+var loader = require('./index.js');
 
-require('./index.js')(gulp, {
+console.log(loader);
+loader.initialize(gulp, {
   params: {
     example: example
   }
