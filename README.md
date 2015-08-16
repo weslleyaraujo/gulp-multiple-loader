@@ -44,7 +44,7 @@ var gulp = require('gulp');
 var loader = require('gulp-multiple-loader');
 
 loader.initialize(gulp, {
-  parmas: {
+  params: {
     example: 'foo'
   }
 });
@@ -84,5 +84,3 @@ module.exports = function(gulp, params) {
 };
 
 ```
-
-*in development*
