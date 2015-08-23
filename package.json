@@ -1,10 +1,10 @@
 {
   "name": "gulp-multiple-loader",
-  "version": "0.1.0",
   "description": "Load single files for each gulp task with shared parameters.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test"
+    "test": "./node_modules/.bin/mocha test",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "",
   "license": "MIT",
@@ -12,6 +12,11 @@
     "eslint": "^1.1.0",
     "gulp": "^3.9.0",
     "lodash": "^3.10.1",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "semantic-release": "^4.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weslleyaraujo/gulp-multiple-loader.git"
   }
 }

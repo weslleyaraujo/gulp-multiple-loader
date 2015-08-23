@@ -1,4 +1,4 @@
-/* global module __filename:true */
+/* global module __filename process:true */
 'use strict';
 
 var _ = require('lodash');
@@ -15,7 +15,7 @@ module.exports = {
 
   defaults: {
     dirName: '/gulp-tasks/',
-    params: {}
+    globals: {}
   },
 
   initialize: function(gulp, options) {
@@ -31,7 +31,7 @@ module.exports = {
   },
 
   getFullPath: function() {
-    return path.join(path.dirname(fs.realpathSync(__filename)), '/');
+    return process.cwd();
   },
 
   setAbsPath: function() {
@@ -51,7 +51,7 @@ module.exports = {
   load: function(file) {
     var fn = require(this.config.ABS_PATH + file);
     try {
-      fn.call(null, this.gulp, this.options.params);
+      fn.call(null, this.gulp, this.options.globals);
     }
     catch(e) {
       throw new Error(this.config.loadError.replace(/#\{file\}/g, file));

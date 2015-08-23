@@ -34,7 +34,7 @@ loader.initialize(gulp, {
 });
 ```
 
-### params
+### globals
 
 Share variables between gulp tasks
 
@@ -44,15 +44,15 @@ var gulp = require('gulp');
 var loader = require('gulp-multiple-loader');
 
 loader.initialize(gulp, {
-  params: {
+  globals: {
     example: 'foo'
   }
 });
 
 // gulp-tasks/default.js
-module.exports = function(gulp, params) {
+module.exports = function(gulp, globals) {
   return gulp.task('default', function() {
-    return params.example; // 'foo'
+    return globals.example; // 'foo'
   });
 };
 
@@ -75,11 +75,11 @@ loader.initialize(gulp, {
 });
 
 // gulp-tasks/default.js
-module.exports = function(gulp, params) {
+module.exports = function(gulp, globals) {
   return gulp.task('default', function() {
-    return gulp.src(params.config.src)
-      .pipe(params.plugins.somePlugin())
-      .pipe(gulp.dest(params.config.dest));
+    return gulp.src(globals.config.src)
+      .pipe(globals.plugins.somePlugin())
+      .paramspipe(gulp.dest(globals.config.dest));
   });
 };
 
