@@ -1,6 +1,6 @@
 {
   "name": "gulp-multiple-loader",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Load single files for each gulp task with shared parameters.",
   "main": "index.js",
   "scripts": {

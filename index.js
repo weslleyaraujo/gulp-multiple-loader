@@ -1,8 +1,7 @@
-/* global module __filename process:true */
+/* global module process:true */
 'use strict';
 
 var _ = require('lodash');
-var path = require('path');
 var fs = require('fs');
 
 module.exports = {
